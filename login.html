@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Care Compass Hospital Login">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Login - Care Compass Hospital</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .login-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('assets/images/backgrounds/2.jpg') no-repeat center center/cover;
+    }
+
+    .login-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .login-card h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: #007bff;
+      color: #ffffff;
+      text-align: center;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .login-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper login-wrapper">
+    <div class="login-card">
+      <h2>Login to Your Account</h2>
+      <form action="login.php" method="POST">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">Login</button>
+        </div>
+      </form>
+      <div class="login-footer">
+        <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        e.preventDefault();
+        alert('Please fill out all fields.');
+      }
+    });
+  </script>
+</body>
+
+</html>

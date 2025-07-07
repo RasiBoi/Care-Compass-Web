@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cookies Policy</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .cookie-container {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .cookie-container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .cookie-container p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cookie-buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .accept-button {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .decline-button {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .accept-button:hover {
+      background-color: #45a049;
+    }
+
+    .decline-button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cookie-container">
+    <h2>Cookies Policy</h2>
+    <p>We use cookies to ensure the best user experience on our website. Do you accept our cookie policy?</p>
+    <div class="cookie-buttons">
+      <button class="accept-button" onclick="acceptCookies()">Accept</button>
+      <button class="decline-button" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      alert('You have accepted cookies.');
+      document.cookie = "cookiesAccepted=true; path=/;";
+      window.location.href = "index.php"; // Redirect or handle as needed
+    }
+
+    function declineCookies() {
+      alert('You have declined cookies. Some features may be unavailable.');
+      document.cookie = "cookiesAccepted=false; path=/;";
+      window.location.href = "index.php"; // Redirect or handle as needed
+    }
+  </script>
+</body>
+
+</html>
